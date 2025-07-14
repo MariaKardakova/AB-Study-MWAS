@@ -1,0 +1,147 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\fmodern\fcharset0 Courier-Bold;\f2\fnil\fcharset0 Charter-Bold;
+\f3\fnil\fcharset0 Charter-Roman;\f4\froman\fcharset0 Times-Roman;\f5\froman\fcharset0 Times-Italic;
+\f6\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid201\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13380\viewh15620\viewkind0
+\deftab720
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \uc0\u55357 \u56516  README: 
+\f1\fs39 GitHub_depression_MRS_MR_V1.R
+\f0\fs28 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\fs24 \cf0 Mediation and Microbiome Risk Scoring Analyses for Microbiome\'96Depression Relationships
+\f3\b0 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f2\b\fs28 \cf0 Purpose\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f4\b0\fs24 \cf0 This script extends the primary analysis by integrating multiple advanced methods to dissect the relationship between the gut microbiome and major depressive disorder (MDD). Specifically, it:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Performs 
+\f0\b two-sample Mendelian Randomization (MR)
+\f4\b0  using summary statistics from the 
+\f0\b MiBioGen consortium
+\f4\b0 \uc0\u8232 (
+\f5\i Kurilshikov et al., Nature Genetics, 2021; DOI: 10.1038/s41588-020-00763-1
+\f4\i0 ) to infer potential 
+\f0\b causal relationships between specific bacterial taxa and MDD
+\f4\b0 .\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Conducts 
+\f0\b mediation analysis
+\f4\b0  to assess whether bacterial taxa mediate the effect of lifestyle or clinical traits on depression.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Constructs and evaluates a 
+\f0\b Microbiome Risk Score (MRS)
+\f4\b0  for MDD based on significant taxa.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Assesses associations between 
+\f0\b individual taxa and epidemiological/lifestyle variables
+\f4\b0 .
+\f3 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f2\b\fs28 \cf0 \strokec2 Main Steps\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f3\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}
+\f4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Load MiBioGen and GWAS summary statistics for depression (snp data).\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Harmonize exposure (bacterial taxa) and outcome (MDD) datasets for MR.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Run MR analyses (IVW, weighted median, MR-Egger, MR-PRESSO), including sensitivity checks (heterogeneity, pleiotropy).\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Perform mediation analysis using the 
+\f6\fs26 mediation
+\f4\fs24  R package to calculate ACME, ADE, and proportion mediated.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Construct an MRS using weighted combinations of key depression-associated taxa.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Test associations between MRS and multiple phenotypes: diet, weight status, comorbidities, lifestyle behaviours.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Explore individual taxa links with epidemiological traits via multivariable regression.
+\f3 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f2\b\fs28 \cf0 \strokec2 Output\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0
+\f3\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Mediation analysis results indicating the proportion of lifestyle-depression relationship mediated by specific bacteria.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Tables showing associations between MRS and lifestyle factors.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Summary statistics for interpreting the potential causal pathway between gut microbiome, lifestyle factors, and depression.
+\f2\b\fs28 \strokec2 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\fs24 \cf0 Tables:\
+\pard\pardeftab720\sa240\partightenfactor0
+\ls4\ilvl0
+\f6\b0\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MR_results.csv
+\f4\fs24 : MR beta estimates, p-values, confidence intervals, and sensitivity test outputs.\
+\ls4\ilvl0
+\f6\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 mediation_results.csv
+\f4\fs24 : Mediation analysis outputs (ACME, ADE, % mediated) for lifestyle\'96taxa\'96depression relationships.\
+\ls4\ilvl0
+\f6\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MRS_associations.csv
+\f4\fs24 : Regression models assessing how the MRS associates with depression, lifestyle, and health traits.\
+\ls4\ilvl0
+\f6\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Taxa_trait_associations.csv
+\f4\fs24 : Summary of regression results for individual taxa vs. epidemiological and lifestyle variables.
+\f3 \strokec2 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f2\b \cf0 \strokec2  Plots:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls5\ilvl0
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MR scatter plots
+\f4\b0  with SNP instruments and causal effect lines.\
+\ls5\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Forest plots
+\f4\b0  of MR estimates for each taxon.\
+\ls5\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Bar plots
+\f4\b0  of taxa mediation effects by trait.\
+\ls5\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Boxplots
+\f4\b0  of MRS distributions in depression cases vs. controls.\
+\ls5\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ROC/AUC curves
+\f4\b0  showing predictive performance of the MRS.\
+\ls5\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Dot plots
+\f4\b0  of significant taxa\'96trait associations with effect sizes and FDR-adjusted p-values.\
+\pard\tx720\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf0 \strokec2 \
+}
